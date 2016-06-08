@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "browserify -t cssify index.js > bundle.js",
+    "build-demo": "rm -r build && node demos/rando.js",
+    "demo": "npm run build-demo && cd build && nesasm start.s && open start.nes",
     "dev": "budo index.js -- -t cssify",
     "test": "standard"
   },
