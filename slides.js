@@ -18,7 +18,12 @@ const slides = [
   neslyMeld,
   neslySound,
   neslySound2,
-  neslySound3
+  neslySound3,
+  demos,
+  future,
+  future2,
+  future3,
+  future4
 ]
 
 function intro (state) {
@@ -33,8 +38,7 @@ function intro2 (state) {
   return h('main', [
     h('article', [
       h('section', [
-        h('h1', 'This is a story about Nintendos and JavaScript'),
-        h('h2', 'and mad science.')
+        h('h1', 'This is a story about Nintendos and JavaScript and mad science')
       ])
     ])
   ])
@@ -149,7 +153,7 @@ function nesly (state) {
     h('article', [
       h('section', [
         h('h1', 'nesly'),
-        h('h2', 'The goal with nesly was to be a programming language that compiled down to 6502.')
+        h('h1', 'The goal with nesly was to be a programming language that compiled down to 6502.')
       ])
     ])
   ])
@@ -238,11 +242,22 @@ neslySplit('smb.nes', (err, data) => {
 }
 
 function neslyMeld (state) {
+  const code = `
+const meld = require('nesly-meld')
+const fs = require('fs')
+
+const file = fs.createWriteStream('new-smb.nes')
+
+meld('smb.nes', 'new-smb.chr', (err, data) => {
+  if (!err) file.write(data)
+})
+`
   return h('main', [
     h('article', [
       h('section', [
         h('h1', 'nesly-meld'),
-        h('h2', 'Meld a CHR into an NES ROM')
+        h('h2', 'Meld a CHR into an NES ROM'),
+        h('pre', code)
       ])
     ])
   ])
@@ -263,7 +278,7 @@ function neslySound2 (state) {
     h('article', [
       h('section', [
         h('h1', 'nesly-sound'),
-        h('h2', 'a js api to an NES sound engine')
+        h('h2', 'js api to an NES sound engine')
       ])
     ])
   ])
@@ -285,6 +300,68 @@ function neslySound3 (state) {
         h('h1', 'nesly-sound'),
         h('h2', 'js api to an NES sound engine'),
         h('pre', code)
+      ])
+    ])
+  ])
+}
+
+function demos (state) {
+  return h('main', [
+    h('article', [
+      h('section', [
+        h('h1', 'Demos')
+      ])
+    ])
+  ])
+}
+
+function future (state) {
+  return h('main', [
+    h('article', [
+      h('section', [
+        h('h1', 'The Future')
+      ])
+    ])
+  ])
+}
+
+function future2 (state) {
+  return h('main', [
+    h('article', [
+      h('section', [
+        h('h1', 'The Future'),
+        h('ul', [
+          h('li', 'nesly-assembler: pure js 6502 assembler')
+        ])
+      ])
+    ])
+  ])
+}
+
+function future3 (state) {
+  return h('main', [
+    h('article', [
+      h('section', [
+        h('h1', 'The Future'),
+        h('ul', [
+          h('li', 'nesly-assembler: pure js 6502 assembler'),
+          h('li', 'web audio')
+        ])
+      ])
+    ])
+  ])
+}
+
+function future4 (state) {
+  return h('main', [
+    h('article', [
+      h('section', [
+        h('h1', 'The Future'),
+        h('ul', [
+          h('li', 'nesly-assembler: pure js 6502 assembler'),
+          h('li', 'web audio'),
+          h('li', 'midi')
+        ])
       ])
     ])
   ])

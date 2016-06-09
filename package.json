@@ -4,10 +4,14 @@
   "description": "nesly talk",
   "main": "index.js",
   "scripts": {
+		"assemble": "cd build && nesasm start.s && open start.nes",
+		"bach-demo": "npm run build-back && npm run assemble",
     "build": "browserify -t cssify index.js > bundle.js",
+		"build-bach": "rm -r build && node demos/bwv-847.js",
     "build-demo": "rm -r build && node demos/rando.js",
-    "demo": "npm run build-demo && cd build && nesasm start.s && open start.nes",
+    "demo": "npm run build-demo && npm run assemble",
     "dev": "budo index.js -- -t cssify",
+    "release": "npm run build && cp default.html index.html && surge && rm index.html",
     "test": "standard"
   },
   "repository": {

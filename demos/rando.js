@@ -7,16 +7,15 @@ const tri = song.triangle
 const noi = song.noise
 
 const time = 1 / 4
-const drumTime = 1 / 8
 
 function loop (n, fn) {
-	if (n === 0) return fn()
-	fn()
-	return loop(n - 1, fn)
+  if (n === 0) return fn()
+  fn()
+  return loop(n - 1, fn)
 }
 
 function randNum (min, max) {
-	return (Math.floor(Math.random() * (max - min + 1)) + min) - 1
+  return (Math.floor(Math.random() * (max - min + 1)) + min) - 1
 }
 
 const notes = [
