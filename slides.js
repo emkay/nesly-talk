@@ -21,6 +21,7 @@ const slides = [
   neslySound2,
   neslySound3,
   demos,
+  meteor,
   future,
   future2,
   future3,
@@ -381,6 +382,21 @@ function neslySound3 (state) {
       ])
     ])
   ])
+}
+
+function meteor (state) {
+  return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
+    h('article', [
+      h('section', [
+        h('h1', 'meteor'),
+        h('iframe', {width: '100%', height: '600px', src: 'http://emkay.github.io/gbjam/'})
+      ])
+    ])
+  ])
+
 }
 
 function demos (state) {
