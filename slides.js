@@ -90,7 +90,6 @@ function nes3 (state) {
       h('section', [
         h('h1', 'Nintendo Entertainment System'),
         h('ul', [
-          h('li', '8 bit 6502 microprocessor'),
           h('li', '1985 in North America'),
           h('li', 'revitalized the industry after the crash of 1983'),
           h('li', 'Introduced the licensing business model of third-party devs working on consoles')
