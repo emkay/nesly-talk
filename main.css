@@ -1,7 +1,13 @@
-body {
-  font-size: 3em;
+* { font-family: monospace; }
+body { font-size: 3em; }
+h1 { font-size: 1.1em; }
+
+.progressbar { 
+  background-color: #666;
+  padding: 3px;
 }
 
-h1 {
-  font-size: 1.1em;
+.progressbar > div {
+  background-color: lightblue;
+  height: 20px;
 }

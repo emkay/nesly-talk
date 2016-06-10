@@ -19,15 +19,11 @@ function randNum (min, max) {
 }
 
 const notes = [
-  'A2', 'C2', 'E2', 'rest',
-  'A3', 'C3', 'E3', 'rest',
-  'A4', 'C4', 'E4', 'rest',
-  'A5', 'C5', 'E5', 'rest',
-  'A6', 'C6', 'E6', 'rest',
   'C2', 'E2', 'G2', 'rest',
   'C3', 'E3', 'G3', 'rest',
   'C4', 'E4', 'G4', 'rest',
   'C5', 'E5', 'G5', 'rest',
+  'C6', 'E6', 'G6', 'rest',
   'C6', 'E6', 'G6', 'rest'
 ]
 

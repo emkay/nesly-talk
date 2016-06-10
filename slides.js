@@ -5,6 +5,7 @@ const slides = [
   nes,
   nes2,
   nes3,
+  nes4,
   software,
   software2,
   software3,
@@ -28,6 +29,9 @@ const slides = [
 
 function intro (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [h('h1', 'This is a story about Nintendos and JavaScript')])
     ])
@@ -36,9 +40,12 @@ function intro (state) {
 
 function intro2 (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
-        h('h1', 'This is a story about Nintendos and JavaScript and mad science')
+        h('h1', 'This is a story about Nintendos and JavaScript, DIY, and mad science')
       ])
     ])
   ])
@@ -46,6 +53,9 @@ function intro2 (state) {
 
 function nes (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'Today we are going to do some time travelin\''),
@@ -57,6 +67,9 @@ function nes (state) {
 
 function nes2 (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'Today we are going to do some time travelin\''),
@@ -69,13 +82,36 @@ function nes2 (state) {
 
 function nes3 (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'Nintendo Entertainment System'),
         h('ul', [
           h('li', '8 bit 6502 microprocessor'),
           h('li', '1985 in North America'),
-          h('li', 'revitalized the industry')
+          h('li', 'revitalized the industry after the crash of 1983'),
+          h('li', 'Introduced the licensing business model of third-party devs working on consoles')
+        ])
+      ])
+    ])
+  ])
+}
+
+function nes4 (state) {
+  return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
+    h('article', [
+      h('section', [
+        h('h1', 'Nintendo Entertainment System'),
+        h('ul', [
+          h('li', 'The CPU is a modified 8-bit 6502'),
+          h('li', 'It has a total of 64kb of memory'),
+          h('li', 'PPU is a custom chip that does the graphics display'),
+          h('li', 'APU has five channels (square1/2, triangle, noise, DMC)')
         ])
       ])
     ])
@@ -84,6 +120,9 @@ function nes3 (state) {
 
 function software (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'Software')
@@ -94,6 +133,9 @@ function software (state) {
 
 function software2 (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'Software'),
@@ -106,6 +148,9 @@ function software2 (state) {
 
 function software3 (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'Software'),
@@ -118,6 +163,9 @@ function software3 (state) {
 
 function diy (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'DIY')
@@ -128,6 +176,9 @@ function diy (state) {
 
 function diy2 (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'DIY'),
@@ -139,6 +190,9 @@ function diy2 (state) {
 
 function diy3 (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'DIY'),
@@ -150,6 +204,9 @@ function diy3 (state) {
 
 function nesly (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'nesly'),
@@ -196,6 +253,9 @@ joyRead({label: 'ReadRight', cb: moveRight, done: enableBg});
  `
 
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'nesly'),
@@ -208,6 +268,9 @@ joyRead({label: 'ReadRight', cb: moveRight, done: enableBg});
 
 function nesly3 (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'nesly'),
@@ -231,6 +294,9 @@ neslySplit('smb.nes', (err, data) => {
 `
 
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'nesly-split'),
@@ -253,6 +319,9 @@ meld('smb.nes', 'new-smb.chr', (err, data) => {
 })
 `
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'nesly-meld'),
@@ -265,6 +334,9 @@ meld('smb.nes', 'new-smb.chr', (err, data) => {
 
 function neslySound (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'nesly-sound')
@@ -275,6 +347,9 @@ function neslySound (state) {
 
 function neslySound2 (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'nesly-sound'),
@@ -295,6 +370,9 @@ function neslySound3 (state) {
   song.write()
 `
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'nesly-sound'),
@@ -307,6 +385,9 @@ function neslySound3 (state) {
 
 function demos (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'Demos')
@@ -317,6 +398,9 @@ function demos (state) {
 
 function future (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'The Future')
@@ -327,6 +411,9 @@ function future (state) {
 
 function future2 (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'The Future'),
@@ -340,6 +427,9 @@ function future2 (state) {
 
 function future3 (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'The Future'),
@@ -354,6 +444,9 @@ function future3 (state) {
 
 function future4 (state) {
   return h('main', [
+    h('div.progressbar', [
+      h('div', {style: `width: ${state.percent}%;`})
+    ]),
     h('article', [
       h('section', [
         h('h1', 'The Future'),
